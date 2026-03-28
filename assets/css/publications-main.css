@@ -1,0 +1,234 @@
+:root {
+    --book-card-bg-dark: #111827;
+    --book-card-bg-light: #ffffff;
+    --book-card-border-dark: rgba(255, 255, 255, 0.15);
+    --book-card-border-light: rgba(0, 0, 0, 0.1);
+    --book-spine-bg-dark: #0d121c;
+    --book-spine-bg-light: #f1f5f9;
+    --book-text-dark: #f8fafc;
+    --book-text-light: #1e293b;
+    --book-glow-color: var(--accent-royal-blue-dark);
+}
+
+html[data-theme='light'] {
+    --book-glow-color: var(--accent-royal-blue-light);
+}
+
+/* --- HERO SECTION --- */
+.publications-hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    height: 35vh;
+    min-height: 280px;
+    max-height: 400px;
+    overflow: hidden;
+    perspective: 1000px; /* For 3D transforms */
+}
+
+html:not([data-theme='light']) .publications-hero {
+    background-color: var(--background-color); /* Deep background */
+}
+html[data-theme='light'] .publications-hero {
+    background-color: #000000; /* Keep black in light mode */
+}
+
+.publications-hero::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-style: preserve-3d;
+    border-radius: 50% / 30%;
+    animation: haloOrbital 16s ease-in-out infinite alternate,
+               haloPulse 4s ease-in-out infinite;
+    will-change: transform, opacity, filter;
+    z-index: -1;
+}
+
+/* Dark Mode Halo Styling */
+html:not([data-theme='light']) .publications-hero::before {
+    width: var(--halo-diameter-vw);
+    height: var(--halo-diameter-vh);
+    background: radial-gradient(circle at center,
+        var(--halo-core-dark) 0%,
+        var(--halo-outer-dark) 50%,
+        transparent 100%);
+    opacity: var(--halo-opacity-dark);
+    filter: blur(var(--halo-blur-dark));
+}
+
+/* Light Mode Halo Styling */
+html[data-theme='light'] .publications-hero::before {
+    width: var(--halo-diameter-vw);
+    height: var(--halo-diameter-vh);
+    background: radial-gradient(circle at center,
+        var(--halo-core-light) 0%,
+        var(--halo-outer-light) 50%,
+        transparent 100%);
+    opacity: var(--halo-opacity-light);
+    filter: blur(var(--halo-blur-light));
+}
+
+.publications-hero .hero-title {
+    font-family: var(--font-family-serif);
+    font-size: 4.5rem;
+    color: #fff;
+    margin: 0;
+    z-index: 1;
+    text-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+/* --- BOOK CARDS SECTION --- */
+.book-card-section {
+    padding: 6rem 2rem;
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.book-card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5rem;
+    perspective: 2000px;
+}
+
+.book-card-link {
+    display: block;
+    text-decoration: none;
+    transform-style: preserve-3d;
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.book-card {
+    width: 280px;
+    height: 400px;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateY(-25deg);
+    transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation: float 8s ease-in-out infinite;
+}
+
+.book-card-link:hover .book-card {
+    transform: rotateY(0deg) translateZ(20px) scale(1.05);
+    animation-play-state: paused;
+}
+
+@keyframes float {
+    0%, 100% { transform: rotateY(-25deg) translateZ(0px) translateY(0px); }
+    50% { transform: rotateY(-25deg) translateZ(5px) translateY(-15px); }
+}
+
+.book-cover, .book-spine, .book-thickness {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+}
+
+.book-cover {
+    transform: translateZ(20px);
+    background-color: var(--book-card-bg-dark);
+    border: 1px solid var(--book-card-border-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem;
+    box-shadow: 0 25px 50px -12px rgba(0,0,0,0.4);
+    transition: box-shadow 0.5s ease;
+}
+
+.book-card-link:hover .book-cover {
+    box-shadow: 0 0 30px -5px var(--book-glow-color), inset 0 0 15px -10px var(--book-glow-color);
+}
+
+.book-title {
+    font-family: var(--font-family-serif);
+    font-size: 2.5rem;
+    color: var(--book-text-dark);
+    text-align: center;
+}
+
+.book-subtitle {
+    font-size: 1rem;
+    color: var(--book-text-dark);
+    opacity: 0.6;
+    margin-top: 0.5rem;
+}
+
+.book-spine {
+    width: 40px;
+    background-color: var(--book-spine-bg-dark);
+    border: 1px solid var(--book-card-border-dark);
+    transform: rotateY(-90deg) translateX(-20px);
+    transform-origin: center left;
+}
+
+.book-thickness {
+    height: 40px;
+    background-color: var(--book-spine-bg-dark);
+    border: 1px solid var(--book-card-border-dark);
+    transform: rotateX(90deg) translateY(-20px);
+    transform-origin: top center;
+}
+
+
+/* Light mode adjustments */
+html[data-theme='light'] .book-cover {
+    background-color: var(--book-card-bg-light);
+    border-color: var(--book-card-border-light);
+}
+html[data-theme='light'] .book-spine, html[data-theme='light'] .book-thickness {
+    background-color: var(--book-spine-bg-light);
+    border-color: var(--book-card-border-light);
+}
+html[data-theme='light'] .book-title, html[data-theme='light'] .book-subtitle {
+    color: var(--book-text-light);
+}
+
+
+/* Click Animation */
+.book-card.opening {
+    transition: transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transform: rotateY(20deg) scale(1.1) !important;
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    .book-card {
+        animation: none;
+        transform: rotateY(0);
+    }
+    .book-card-link:hover .book-card {
+        transform: scale(1.05);
+    }
+    .book-card.opening {
+        transform: scale(1.1) !important;
+    }
+}
+
+/* Responsive layout */
+@media (max-width: 1024px) {
+    .book-card-grid {
+        grid-template-columns: 1fr;
+        gap: 6rem;
+    }
+    .book-card {
+        transform: rotateY(0deg);
+    }
+    @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-15px); }
+    }
+    .book-card-link:hover .book-card {
+        transform: scale(1.05) translateZ(5px);
+    }
+}
