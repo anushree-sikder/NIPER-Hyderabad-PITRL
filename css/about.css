@@ -1,0 +1,373 @@
+:root {
+    --about-bg-dark: #010412;
+    --about-bg-light: #f7f9fc;
+    --about-text-dark: #cdd6f4;
+    --about-text-light: #2c3e50;
+    --about-card-bg-dark: rgba(17, 25, 40, 0.5);
+    --about-card-bg-light: rgba(255, 255, 255, 0.7);
+    --about-border-dark: rgba(59, 130, 246, 0.15);
+    --about-border-light: rgba(200, 210, 225, 0.5);
+
+    /* Theme-aware accent colors */
+    --accent-royal-blue-dark: #3b82f6;
+    --accent-royal-blue-light: #007bff; /* Vibrant blue for light mode */
+    --accent-glow-dark: 0 0 20px rgba(59, 130, 246, 0.6);
+    --accent-glow-light: 0 0 20px rgba(0, 123, 255, 0.4); /* Lighter glow for light mode */
+
+    /* Royal Blue Halo Effect Colors */
+    --halo-core-dark: #000080; /* Navy Blue - Deeper core */
+    --halo-outer-dark: #0000cd; /* Medium Blue - Darker outer glow */
+    --halo-opacity-dark: 0.7; /* Slightly increased opacity for darker feel */
+    --halo-blur-dark: 120px;
+
+    --halo-core-light: #0000a0; /* Royal Blue - Deeper core for light mode */
+    --halo-outer-light: #0000cd; /* Medium Blue - Darker outer glow for light mode */
+    --halo-opacity-light: 0.7; /* Increased opacity for light mode to match prominence */
+    --halo-blur-light: 100px; /* Increased blur for light mode */
+
+    --halo-diameter-vw: 50vw; /* Base diameter for scalability */
+    --halo-diameter-vh: 50vh; /* Base diameter for scalability */
+}
+
+/* Base styles for About Page */
+html:not([data-theme='light']) body { /* Default to dark theme if no data-theme or data-theme='dark' */
+    background-color: var(--about-bg-dark);
+    color: var(--about-text-dark);
+    font-family: 'Belleza', sans-serif;
+}
+html:not([data-theme='light']) .section-title { /* Apply section title color globally */
+    font-size: 2.8rem;
+    color: #fff; /* White for dark mode titles */
+    margin-bottom: 2rem;
+}
+/* Light Mode */
+html[data-theme='light'] body {
+    background-color: var(--about-bg-light);
+    color: var(--about-text-light);
+}
+html[data-theme='light'] .section-title { color: #1a2b48; }
+
+/* Grid Helpers */
+.grid-2 { display: grid; grid-template-columns: 1fr 3fr; gap: 3rem; align-items: center; }
+.grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2rem; }
+
+/* --- 1. Hero Section --- */
+.hero-intro {
+    height: 35vh; /* Shorter frame */
+    min-height: 280px;
+    max-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    /* background-color removed from here */
+    overflow: hidden;
+    perspective: 1000px; /* For 3D transforms */
+}
+html:not([data-theme='light']) .hero-intro { /* Dark mode background for hero */
+    background-color: var(--about-bg-dark);
+}
+html[data-theme='light'] .hero-intro { /* Light mode background for hero */
+    background-color: var(--about-bg-dark); /* Keep black in light mode */
+}
+
+.hero-intro::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-style: preserve-3d; /* Ensure children can have 3D transforms */
+    border-radius: 50% / 30%; /* Oval shape */
+    animation: haloOrbital 16s ease-in-out infinite alternate,
+               haloPulse 4s ease-in-out infinite;
+    will-change: transform, opacity, filter; /* Optimize for GPU acceleration */
+    z-index: -1; /* Behind text */
+}
+
+/* Dark Mode Halo Styling */
+html:not([data-theme='light']) .hero-intro::before {
+    width: var(--halo-diameter-vw);
+    height: var(--halo-diameter-vh);
+    background: radial-gradient(circle at center,
+        var(--halo-core-dark) 0%,
+        var(--halo-outer-dark) 50%,
+        transparent 100%);
+    opacity: var(--halo-opacity-dark);
+    filter: blur(var(--halo-blur-dark));
+}
+
+/* Light Mode Halo Styling */
+html[data-theme='light'] .hero-intro::before {
+    width: var(--halo-diameter-vw); /* Same size as dark mode */
+    height: var(--halo-diameter-vh); /* Same size as dark mode */
+    background: radial-gradient(circle at center,
+        var(--halo-core-light) 0%,
+        var(--halo-outer-light) 50%,
+        transparent 100%);
+    opacity: var(--halo-opacity-light);
+    filter: blur(var(--halo-blur-light));
+}
+
+/* Halo Animations */
+@keyframes haloOrbital {
+    0% { transform: translate3d(-50%, -50%, 0) rotateY(0deg) rotateX(0deg) scale(1); }
+    25% { transform: translate3d(-60%, -40%, 10px) rotateY(15deg) rotateX(5deg) scale(1.03); }
+    50% { transform: translate3d(-50%, -50%, 0) rotateY(0deg) rotateX(0deg) scale(1); }
+    75% { transform: translate3d(-40%, -60%, -10px) rotateY(-15deg) rotateX(-5deg) scale(0.97); }
+    100% { transform: translate3d(-50%, -50%, 0) rotateY(0deg) rotateX(0deg) scale(1); }
+}
+
+@keyframes haloPulse {
+    0%, 100% { opacity: 1; filter: blur(var(--halo-blur-dark)); }
+    50% { opacity: 0.8; filter: blur(calc(var(--halo-blur-dark) * 0.8)); }
+}
+
+@keyframes haloPulseLight {
+    0%, 100% { opacity: 1; filter: blur(var(--halo-blur-light)); }
+    50% { opacity: 0.8; filter: blur(calc(var(--halo-blur-light) * 0.8)); }
+}
+
+/* No change to slow-rotate, it's replaced by haloOrbital */
+/* @keyframes slow-rotate {
+    from { transform: translate(-50%, -50%) rotateY(0deg) rotateX(0deg) rotateZ(0deg); }
+    to { transform: translate(-50%, -50%) rotateY(360deg) rotateX(30deg) rotateZ(360deg); }
+} */
+
+.hero-intro .hero-content {
+    position: relative;
+    z-index: 1; /* Ensure text is above halo */
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+.hero-intro .hero-title { font-size: 4.5rem; }
+html:not([data-theme='light']) .hero-intro .hero-title { color: #fff; }
+html[data-theme='light'] .hero-intro .hero-title { color: #fff; }
+.hero-intro .hero-subtitle { font-size: 1.4rem; opacity: 0.8; }
+html:not([data-theme='light']) .hero-intro .hero-subtitle { color: #fff; }
+html[data-theme='light'] .hero-intro .hero-subtitle { color: #fff; }
+.hero-intro .hero-title, .hero-intro .hero-subtitle {
+    /* opacity: 0; */ /* Removed to ensure visibility */
+}
+
+/* --- 2. Who We Are --- */
+.who-we-are .content-block p {
+    font-size: 1.2rem;
+    line-height: 1.7;
+}
+
+/* --- 3. Leadership --- */
+.leadership-direction {
+    background: var(--surface-color);
+    backdrop-filter: blur(5px);
+}
+.leadership-direction p {
+    max-width: 800px;
+    margin: 0 auto 2.5rem auto;
+    font-size: 1.1rem;
+}
+
+/* --- 4. Vision, Mission, Goals --- */
+.vmg-card {
+    border-radius: 16px;
+    padding: 2.5rem;
+    backdrop-filter: blur(12px);
+    transition: transform 0.4s, box-shadow 0.4s;
+    transform-style: preserve-3d;
+    opacity: 0;
+}
+html:not([data-theme='light']) .vmg-card { /* Dark mode styles */
+    background: var(--about-card-bg-dark);
+    border: 1px solid var(--about-border-dark);
+}
+.vmg-card:hover {
+    transform: perspective(1000px) translateY(-10px) rotateX(5deg);
+    /* box-shadow: var(--accent-glow);  -- removed base */
+    /* border-color: var(--accent-royal-blue); -- removed base */
+}
+html:not([data-theme='light']) .vmg-card:hover {
+    box-shadow: var(--accent-glow-dark);
+    border-color: var(--accent-royal-blue-dark);
+}
+html[data-theme='light'] .vmg-card:hover {
+    box-shadow: var(--accent-glow-light);
+    border-color: var(--accent-royal-blue-light);
+}
+.vmg-card .card-title { font-size: 1.8rem; margin-bottom: 1rem; }
+html:not([data-theme='light']) .vmg-card .card-title { color: #fff; }
+.vmg-card ul { list-style: none; padding-left: 0; }
+.vmg-card li { margin-bottom: 0.5rem; }
+
+html[data-theme='light'] .vmg-card {
+    background: var(--about-card-bg-light);
+    border-color: var(--about-border-light);
+}
+html[data-theme='light'] .vmg-card .card-title { color: #1a2b48; }
+
+/* --- 5. Ethos --- */
+.ethos .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 16px;
+    padding: 3rem;
+    backdrop-filter: blur(10px);
+}
+html:not([data-theme='light']) .ethos .container {
+    background: var(--about-card-bg-dark);
+    border: 1px solid var(--about-border-dark);
+}
+.ethos-item h4 { font-size: 1.3rem; opacity: 0.8; }
+.ethos-divider {
+    width: 1px;
+    height: 40px;
+}
+html:not([data-theme='light']) .ethos-divider { background-color: var(--about-border-dark); }
+html[data-theme='light'] .ethos .container { background: var(--about-card-bg-light); border-color: var(--about-border-light); }
+html[data-theme='light'] .ethos-divider { background-color: var(--about-border-light); }
+
+
+/* --- 6. 3D Animated Collage Gallery --- */
+.collage-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    max-width: 1200px;
+    margin: 4rem auto;
+    gap: 3rem; /* Further Increased base gap */
+}
+
+.collage-item {
+    border-radius: 14px;
+    overflow: hidden;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.5s ease;
+    cursor: pointer;
+    border: 1.5px solid rgba(0, 123, 255, 0.35);
+    box-shadow: 0 0 15px rgba(0, 100, 255, 0.3), 0 0 6px rgba(0, 100, 255, 0.2), inset 0 0 8px rgba(0, 100, 255, 0.05);
+}
+
+.collage-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+/* Portrait items (Row 1) - tall boxes */
+.collage-portrait {
+    grid-column: span 2;
+    aspect-ratio: 3 / 4;
+    min-height: 380px;
+}
+
+/* Wide landscape item (Row 2) - big wide box */
+.collage-wide {
+    grid-column: 1 / -1;
+    min-height: 350px;
+    margin: 3rem 0; /* Further Extra spacing between portrait (top) and wide (middle) */
+}
+.collage-wide img {
+    object-fit: contain;
+}
+
+/* Half-width items (Row 3) - two equal landscape boxes */
+.collage-half {
+    grid-column: span 3;
+    aspect-ratio: 16 / 9;
+    min-height: 280px;
+}
+.collage-half img {
+    object-fit: contain;
+}
+
+/* 3D Hover Effects */
+.collage-item:hover {
+    transform: perspective(800px) rotateY(-3deg) rotateX(3deg) translateZ(20px) scale(1.03);
+    box-shadow: 0 0 30px rgba(0, 123, 255, 0.6), 0 0 60px rgba(0, 123, 255, 0.25), 0 10px 40px rgba(0, 0, 0, 0.3);
+    border-color: rgba(0, 123, 255, 0.5);
+    z-index: 2;
+}
+
+.collage-item:hover img {
+    transform: scale(1.08);
+}
+
+/* Pulsing Blue Glow Animation */
+@keyframes collagePulsingBlue {
+    0%, 100% { box-shadow: 0 0 35px rgba(0, 123, 255, 0.45), 0 0 15px rgba(0, 123, 255, 0.35); }
+    50% { box-shadow: 0 0 60px rgba(0, 123, 255, 0.75), 0 0 35px rgba(0, 123, 255, 0.55); }
+}
+
+.collage-item {
+    animation: collagePulsingBlue 4s ease-in-out infinite, anim-fade-up-in 1s forwards;
+    opacity: 0;
+    border: 1.5px solid rgba(0, 123, 255, 0.35); /* Consistently blue border */
+}
+
+/* Light mode adjustments */
+html[data-theme='light'] .collage-item {
+    animation: collagePulsingBlue 4s ease-in-out infinite, anim-fade-up-in 1s forwards;
+    border-color: rgba(0, 123, 255, 0.3);
+}
+
+html[data-theme='light'] .collage-item:hover {
+    box-shadow: 0 0 75px rgba(0, 123, 255, 0.75), 0 0 45px rgba(0, 123, 255, 0.45);
+    border-color: rgba(0, 123, 255, 0.8);
+}
+
+/* Dark mode hover refinement */
+html:not([data-theme='light']) .collage-item:hover {
+    box-shadow: 0 0 75px rgba(0, 123, 255, 0.85), 0 0 45px rgba(0, 123, 255, 0.55);
+    border-color: rgba(0, 123, 255, 0.9);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .collage-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .collage-portrait { aspect-ratio: 1 / 1; }
+    .collage-portrait:nth-child(3) { grid-column: 1 / -1; aspect-ratio: 16 / 9; }
+    .collage-wide { aspect-ratio: 16 / 9; }
+    .collage-half { grid-column: 1 / -1; }
+}
+
+/* --- 7. Closing Statement --- */
+.closing-statement { padding: 6rem 2rem; }
+.closing-statement p {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    position: relative;
+    display: inline-block;
+}
+.closing-statement p::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.6s ease;
+}
+html:not([data-theme='light']) .closing-statement p::after { background: var(--accent-royal-blue-dark); }
+html[data-theme='light'] .closing-statement p::after { background: var(--accent-royal-blue-light); }
+.closing-statement.is-visible p::after {
+    transform: scaleX(1);
+}
+
+/* --- Base Animations --- */
+.anim-fade-slide { opacity: 0; transform: translateY(20px); animation: anim-fade-slide-in 1s forwards; }
+.anim-slide-left { opacity: 0; transform: translateX(-30px); animation: anim-slide-left-in 1s forwards; }
+.anim-fade-scale { opacity: 0; transform: scale(0.9); animation: anim-fade-scale-in 1s forwards; }
+.anim-lift { opacity: 0; transform: translateY(40px); animation: anim-lift-in 0.8s forwards; }
+.anim-fade-up { opacity: 0; transform: translateY(30px); animation: anim-fade-up-in 1s forwards; }
+
+@keyframes anim-fade-slide-in { to { opacity: 1; transform: translateY(0); } }
+@keyframes anim-slide-left-in { to { opacity: 1; transform: translateX(0); } }
+@keyframes anim-fade-scale-in { to { opacity: 1; transform: scale(1); } }
+@keyframes anim-lift-in { to { opacity: 1; transform: translateY(0); } }
+@keyframes anim-fade-up-in { to { opacity: 1; transform: translateY(0); } }

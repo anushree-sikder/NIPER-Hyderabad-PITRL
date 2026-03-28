@@ -1,0 +1,150 @@
+:root {
+    --team-card-bg-dark: rgba(17, 25, 40, 0.5);
+    --team-card-bg-light: #ffffff;
+    --team-card-border-dark: rgba(59, 130, 246, 0.2);
+    --team-card-border-light: rgba(221, 229, 242, 1);
+    --team-card-shadow-light: 0 10px 40px -15px rgba(200, 210, 230, 0.8);
+    --team-accent-dark: #2b6cff;
+    --team-accent-light: #1f4cff;
+    --team-accent-glow: 0 0 25px -5px var(--team-accent-dark);
+}
+
+#team-page { overflow: hidden; }
+
+/* Existing Hero & Intro Sections */
+.team-hero-intro {
+    height: 40vh;
+    display: flex; align-items: center; justify-content: center;
+    text-align: center; position: relative;
+    overflow: hidden; /* Ensure pseudo-element stays within bounds */
+    background-color: var(--about-bg-dark); /* Dark mode background for contrast */
+    perspective: 1000px;
+}
+.team-hero-intro::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-style: preserve-3d;
+    border-radius: 50% / 30%;
+    animation: haloOrbital 16s ease-in-out infinite alternate,
+               haloPulse 4s ease-in-out infinite;
+    will-change: transform, opacity, filter;
+    z-index: -1;
+}
+
+.team-hero-intro .hero-title {
+    font-size: clamp(3.5rem, 8vw, 5.5rem);
+}
+
+/* Dark Mode Halo Styling (using existing variables from style.css) */
+html:not([data-theme='light']) .team-hero-intro::before {
+    width: var(--halo-diameter-vw);
+    height: var(--halo-diameter-vh);
+    background: radial-gradient(circle at center,
+        var(--halo-core-dark) 0%,
+        var(--halo-outer-dark) 50%,
+        transparent 100%);
+    opacity: var(--halo-opacity-dark);
+    filter: blur(var(--halo-blur-dark));
+}
+
+/* Light Mode Halo Styling */
+html[data-theme='light'] .team-hero-intro {
+    background-color: black; /* Light mode background set to black */
+}
+html[data-theme='light'] .team-hero-intro .hero-title {
+    color: white; /* Light mode title color set to white */
+}
+html[data-theme='light'] .team-hero-intro::before {
+    width: var(--halo-diameter-vw);
+    height: var(--halo-diameter-vh);
+    background: radial-gradient(circle at center,
+        var(--halo-core-light) 0%,
+        var(--halo-outer-light) 50%,
+        transparent 100%);
+    opacity: var(--halo-opacity-light);
+    filter: blur(var(--halo-blur-light));
+}
+
+.team-introduction { padding: 2rem 1rem 1rem; text-align: center; }
+.team-introduction p {
+    max-width: 65ch;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Existing Nav Cards */
+.team-navigation-cards { padding-bottom: 0; }
+.nav-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.nav-card {
+    display: block;
+    text-decoration: none;
+    padding: 2.5rem;
+    border-radius: 16px;
+    background: var(--team-card-bg-dark);
+    border: 1px solid var(--team-card-border-dark);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.nav-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    border-color: var(--team-accent-dark);
+}
+.nav-card-title { font-family: var(--font-family-serif); font-size: 1.8rem; margin-bottom: 0.5rem; }
+.nav-card-descriptor { opacity: 0.7; }
+html[data-theme='light'] .nav-card {
+    background: var(--team-card-bg-light);
+    border-color: var(--team-card-border-light);
+    box-shadow: var(--team-card-shadow-light);
+}
+
+/* LIFE AT PITRL - 3D ARC GALLERY OVERRIDES FOR LARGER SIZES */
+.life-at-pitrl-section {
+    padding: 2rem 0 4rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.life-at-pitrl-section .photo-gallery-caption {
+    margin-top: 1rem;
+}
+
+.life-at-pitrl-section .section-title-container {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.life-at-pitrl-section .section-title-container .section-title {
+    font-family: var(--font-family-serif);
+    font-size: 2.75rem;
+    color: var(--text-color);
+}
+
+/* Larger gallery for the Team page */
+.life-at-pitrl-section .photo-scroll-viewport {
+    height: 600px;
+}
+
+.life-at-pitrl-section .photo-slide img {
+    max-width: 650px;
+    max-height: 550px;
+}
+
+@media (max-width: 768px) {
+    .life-at-pitrl-section .photo-scroll-viewport {
+        height: 400px;
+    }
+    .life-at-pitrl-section .photo-slide img {
+        max-width: 380px;
+        max-height: 350px;
+    }
+}
