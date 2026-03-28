@@ -1,17 +1,17 @@
-# PITRL: Pharmaceutical Innovation & Translational Research Laboratory
+# 🔬 PITRL: Pharmaceutical Innovation & Translational Research Laboratory
 
-## Introduction
+## ⭐ Introduction
 The Pharmaceutical Innovation & Translational Research Laboratory (PITRL), located within the Department of Pharmaceutics at NIPER Hyderabad, is a premier research facility focused on advancing next-generation therapeutic strategies. The laboratory specializes in translational research, nanomedicine, and novel drug delivery systems (NDDS) aimed at the prevention and management of complex diseases. This website serves as the digital gateway to the lab's research outputs, team profiles, and academic contributions.
 
 ---
 
-## Live Demo and Visuals
+## 🔗 Live Demo and Visuals
 - **Live Link:** [https://niper-pitrl.github.io/](https://niper-pitrl.github.io/)
   ![PITRL Workspace](assets/images/logos/PITRL_Logo.png)
 
 ---
 
-## Features
+## ⭐ Features
 | Feature | Description |
 | :--- | :--- |
 | **Responsive Design** | Fluid layouts optimized for desktop, tablet, and mobile devices. |
@@ -23,7 +23,7 @@ The Pharmaceutical Innovation & Translational Research Laboratory (PITRL), locat
 
 ---
 
-## Tech Stack
+## 👩🏻‍💻 Tech Stack
 | Layer | Technologies |
 | :--- | :--- |
 | **Frontend Core** | HTML5, Vanilla CSS3 (Custom Design System), Vanilla JavaScript (ES6+) |
@@ -34,7 +34,7 @@ The Pharmaceutical Innovation & Translational Research Laboratory (PITRL), locat
 
 ---
 
-## Pages and Subpages
+## 🌐 Pages and Subpages
 | Main Page | Category | Subpages / Sections |
 | :--- | :--- | :--- |
 | **Home** | Overview | Hero Section, PI Profile, Research Cards, News Feed |
@@ -47,7 +47,7 @@ The Pharmaceutical Innovation & Translational Research Laboratory (PITRL), locat
 
 ---
 
-## Use Cases
+## ✨ Use Cases
 | User Segment | Primary Use Case |
 | :--- | :--- |
 | **Researchers** | Accessing detailed publications and patent certificates. |
@@ -57,7 +57,7 @@ The Pharmaceutical Innovation & Translational Research Laboratory (PITRL), locat
 
 ---
 
-## Website Workflow
+## ⭐ Website Workflow
 ```mermaid
 graph TD
     A[User Entry] --> B{Choose Theme}
