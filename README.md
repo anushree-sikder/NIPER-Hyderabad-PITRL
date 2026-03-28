@@ -1,99 +1,135 @@
-# PITRL | Pharmaceutical Innovation & Translational Research Laboratory 🧪💊
+# PITRL: Pharmaceutical Innovation & Translational Research Laboratory
 
-Welcome to the official codebase for the **Pharmaceutical Innovation & Translational Research Laboratory (PITRL)** website. Based at the Department of Pharmaceutics, NIPER Hyderabad, PITRL is dedicated to advancing next-generation therapeutic strategies for complex diseases through cutting-edge nanomedicine and translational research.
-
----
-
-## 🌟 Live Demo
-> [!TIP]
-> **[View the Live Site here](https://niper-pitrl.github.io/)** *(Replace with actual link if available)*
-
-![PITRL Homepage Screenshot](assets/images/logos/PITRL_Logo.png) 
-*(Add a full-page screenshot here once available in assets)*
+## Introduction
+The Pharmaceutical Innovation & Translational Research Laboratory (PITRL), located within the Department of Pharmaceutics at NIPER Hyderabad, is a premier research facility focused on advancing next-generation therapeutic strategies. The laboratory specializes in translational research, nanomedicine, and novel drug delivery systems (NDDS) aimed at the prevention and management of complex diseases. This website serves as the digital gateway to the lab's research outputs, team profiles, and academic contributions.
 
 ---
 
-## ✨ Features
-
-- **🌓 Dynamic Theme Engine:** Seamlessly toggle between Light and Dark modes with a refined, theme-aware design system.
-- **🔬 Research Sub-Specialties:** Dedicated interactive sections for Neuro, Cancer, Diabetes, Derma, and Solid-State research.
-- **📚 Dynamic Publications:** Automated filtering and injection of Research Papers, Patents, and Book Chapters using a modular JavaScript architecture.
-- **👨‍🔬 Team Management:** Comprehensive profiles for the Principal Investigator (Dr. Saurabh Srivastava), Current Members, and Alumni.
-- **✨ Premium UI/UX:** Features a custom "Halo Effect" on PI profiles, 3D animated galleries, and smooth scroll-triggered animations.
-- **🔍 Global Search:** Instant search functionality to navigate through research areas and lab information.
-- **📱 Fully Responsive:** Optimized for all devices, from high-resolution desktops to mobile screens.
+## Live Demo and Visuals
+- **Live Link:** [https://niper-pitrl.github.io/](https://niper-pitrl.github.io/)
+- **Visual Overview:**
+  ![PITRL Workspace](assets/images/logos/PITRL_Logo.png)
 
 ---
 
-## 🛠️ Tech Stack
-
-### Frontend Core
-- **HTML5:** Semantic architecture for SEO and accessibility.
-- **Vanilla CSS3:** Custom design system with glassmorphism, CSS variables, and keyframe animations.
-- **Vanilla JavaScript:** Reactive UI components and dynamic data rendering (no heavy frameworks for maximum performance).
-
-### Data & Automation
-- **JSON Data:** Centralized repository for publications and patents.
-- **Python Utilities:** Backend scripts (`count.py`, `read_pdfs.py`) for processing metadata and automating publication lists.
-
-### Typography
-- **Headings:** *Playfair Display* (Serif)
-- **Body:** *Belleza* (Sans-serif)
+## Features
+| Feature | Description |
+| :--- | :--- |
+| **Responsive Design** | Fluid layouts optimized for desktop, tablet, and mobile devices. |
+| **Theme Engine** | System-aware Dark and Light mode toggle with persistent local storage. |
+| **Dynamic Filtering** | Real-time injection of publications and patents based on research areas. |
+| **Interactive UI** | Scroll-triggered animations, 3D research cards, and "halo" portrait effects. |
+| **Stats Counter** | Automated count-up animation for lab achievements and publications. |
+| **Global Search** | Overlay-based search functionality across all sub-pages. |
 
 ---
 
-## 🚀 Getting Started
+## Tech Stack
+| Layer | Technologies |
+| :--- | :--- |
+| **Frontend Core** | HTML5, Vanilla CSS3 (Custom Design System), Vanilla JavaScript (ES6+) |
+| **Typography** | Playfair Display (Headings), Belleza (Body Text) |
+| **Data Processing** | JSON-based Publication Repositories |
+| **Automation Scripts** | Python (Metadata extraction, PDF parsing, Pub-count automation) |
+| **Version Control** | Git, GitHub |
+
+---
+
+## Pages and Subpages
+| Main Page | Category | Subpages / Sections |
+| :--- | :--- | :--- |
+| **Home** | Overview | Hero Section, PI Profile, Research Cards, News Feed |
+| **About** | Background | Mission, Vision, Lab Philosophy |
+| **Research** | Scientific Areas | Neuro, Cancer, Diabetes, Derma, Solid-State |
+| **Team** | Members | Principal Investigator, Current Members, Alumni |
+| **Publications** | Academic Work | Research Papers, Patents, Book & Chapters |
+| **Resources** | Facilities | Lab Facilities, Community, News & Updates |
+| **Contact** | Communication | Inquiry Form, Location Map, Research Profiles |
+
+---
+
+## Use Cases
+| User Segment | Primary Use Case |
+| :--- | :--- |
+| **Researchers** | Accessing detailed publications and patent certificates. |
+| **Prospective Students** | Exploring lab facilities and current research focus areas. |
+| **Academic Partners** | Identifying collaboration opportunities and PI expertise. |
+| **Alumni** | Staying updated with lab news and member transitions. |
+
+---
+
+## Website Workflow
+```mermaid
+graph TD
+    A[User Entry] --> B{Choose Theme}
+    B -- Dark Mode --> C[Set data-theme='dark']
+    B -- Light Mode --> D[Set data-theme='light']
+    
+    A --> E[Main Navigation]
+    E --> F[Home Page]
+    E --> G[Research Subgroups]
+    E --> H[Publications Portal]
+    
+    G --> G1[Neuro/Cancer/Diabetes/Derma/Solid-State]
+    G1 --> G2[Dynamic Content Loading]
+    
+    H --> H1[Papers/Patents/Books]
+    H1 --> H2[Metadata Filtering]
+    
+    E --> I[Search Overlay]
+    I --> J[Global Query]
+```
+
+---
+
+## Getting Started
 
 ### Prerequisites
-You only need a modern web browser. No complex compilers or runtimes are required for the frontend.
+- A modern web browser (Chrome, Firefox, Safari, or Edge).
+- (Optional) Python 3.x if you intend to run the data automation scripts.
 
 ### Local Installation
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/your-username/NIPER-PITRL.git
    ```
-2. **Navigate to the directory:**
+2. **Access the Project:**
    ```bash
    cd NIPER-PITRL
    ```
-3. **Run the site:**
-   - Simply open `index.html` in your browser.
-   - *Recommended:* Use the [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension in VS Code for a better development experience.
+3. **Execution:**
+   - Open `index.html` directly in your browser.
+   - For the best experience, use a local server like `npx serve .` or VS Code Live Server.
 
 ---
 
-## 📂 Project Structure
-
-```bash
-NIPER-PITRL/
-├── assets/             # Images, Logos, PDFs, and Favicons
-├── css/                # style.css (Core), research.css, etc.
-├── js/                 # script.js (Theme/Nav), research.js (Dynamic filtering)
-├── publications/       # Data-driven subpages for papers/patents
-├── scripts/            # Python automation scripts
-└── index.html          # Main landing page
-```
+## Usage
+1. **Navigation:** Use the sticky header to access various research and team sections.
+2. **Theme Toggle:** Click the sun/moon icon in the top right to switch visual modes.
+3. **Research Exploration:** Navigate to the "Research" dropdown to see specific subgroup advancements.
+4. **Publications:** Access the "Publications" menu to view categorized papers and downloadable patent certificates.
 
 ---
 
-## 🤝 Contributing
+## Resources
+| Resource Type | Source / Detail |
+| :--- | :--- |
+| **Fonts** | Google Fonts (Playfair Display, Belleza) |
+| **Icons** | Custom Inline SVGs & Material Icons |
+| **Styles** | `css/style.css`, `css/research.css` |
+| **Logic** | `js/script.js`, `js/research.js` |
+| **Data** | `publications/papers.json` (Internal Metadata) |
 
-We welcome contributions from the lab members and developers!
-1. Fork the Project.
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`).
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`).
-4. Push to the Branch (`git push origin feature/AmazingFeature`).
-5. Open a Pull Request.
+---
+
+## Contributing
+Professional collaboration is welcome:
+1. Fork the repository.
+2. Create a specific feature branch (`git checkout -b feature/ScientificUpdate`).
+3. Commit technical changes with clear documentation.
+4. Submit a Pull Request for internal review by the lab admins.
 
 ---
 
-## 📄 License & Author
-
-**License:** Distributed under the MIT License. See `LICENSE` for more information.
-
-**Author:** 
-- **Dr. Saurabh Srivastava** (Principal Investigator)
-- **Architected & Engineered by:** Anushree Kajal Sikder
-
----
-*Advancing translational pharmaceutical science through innovation and collaboration.* 🚀
+## Author
+**Anushree Kajal Sikder**
