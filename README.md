@@ -82,13 +82,13 @@ graph TD
 
 ---
 
-## Getting Started
+## 👉🏻 Getting Started
 
-### Prerequisites
+### 🔹 Prerequisites
 - A modern web browser (Chrome, Firefox, Safari, or Edge).
 - (Optional) Python 3.x if you intend to run the data automation scripts.
 
-### Local Installation
+### 🔹 Local Installation
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/your-username/NIPER-PITRL.git
@@ -103,7 +103,7 @@ graph TD
 
 ---
 
-## Usage
+## ✨ Usage
 1. **Navigation:** Use the sticky header to access various research and team sections.
 2. **Theme Toggle:** Click the sun/moon icon in the top right to switch visual modes.
 3. **Research Exploration:** Navigate to the "Research" dropdown to see specific subgroup advancements.
@@ -111,7 +111,7 @@ graph TD
 
 ---
 
-## Resources
+## 📝 Resources
 | Resource Type | Source / Detail |
 | :--- | :--- |
 | **Fonts** | Google Fonts (Playfair Display, Belleza) |
@@ -122,7 +122,7 @@ graph TD
 
 ---
 
-## Contributing
+## 🤝 Contributing
 Professional collaboration is welcome:
 1. Fork the repository.
 2. Create a specific feature branch (`git checkout -b feature/ScientificUpdate`).
