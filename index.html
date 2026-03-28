@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PITRL | Pharmaceutical Innovation & Translational Research Laboratory</title>
+    <link rel="icon" href="assets/images/logos/PITRL_Logo.png" type="image/png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/research.css">
+    <!-- Dark/Light Mode initial setup -->
+
+    <style>
+        .hero .hero-content {
+            max-width: 1400px !important;
+        }
+
+        .hero .hero-title {
+            font-size: clamp(2.5rem, 5vw, 4.2rem) !important;
+            line-height: 1.2;
+            white-space: nowrap;
+            /* keep it from wrapping arbitrarily */
+            margin-bottom: 2.5rem !important;
+            /* increased space below title */
+        }
+
+        @media (max-width: 1100px) {
+            .hero .hero-content {
+                max-width: 100%;
+            }
+
+            .hero .hero-title {
+                white-space: normal;
+                font-size: clamp(1.8rem, 4vw, 3rem) !important;
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            /* On mobile, allow the word laboratory to flow naturally or keep the break */
+            .hero .hero-title {
+                font-size: clamp(1.8rem, 5vw, 2.5rem) !important;
+            }
+
+            .hero .hero-title br {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="sticky-header">
+        <nav class="navbar">
+            <div class="nav-left">
+                <a href="index.html" class="logo-container">
+                    <img src="assets/images/logos/PITRL_Logo.png" alt="PITRL Logo" class="logo-image">
+                    <div class="logo-text">
+                        <span>PITRL</span>
+                    </div>
+                </a>
+            </div>
+            <div class="nav-center">
+                <div class="nav-links">
+                    <a href="index.html" class="nav-item active"><span>Home</span></a>
+                    <a href="about.html" class="nav-item"><span>About</span></a>
+                    <div class="dropdown-wrapper">
+                        <button class="nav-item dropdown-toggle">
+                            <a href="research.html"
+                                style="text-decoration:none; color:inherit;"><span>Research</span></a>
+                            <span class="chevron"></span>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a href="neuro-research.html">Neuro Research</a>
+                            <a href="cancer-research.html">Cancer Research</a>
+                            <a href="diabetes-research.html">Diabetes Research</a>
+                            <a href="derma-research.html">Derma Research</a>
+                            <a href="solid-state-research.html">Solid-State Research</a>
+                        </div>
+                    </div>
+                    <div class="dropdown-wrapper">
+                        <button class="nav-item dropdown-toggle">
+                            <a href="team.html" style="text-decoration:none; color:inherit;"><span>Team</span></a>
+                            <span class="chevron"></span>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a href="pi.html">Principal Investigator</a>
+                            <a href="members.html">Current Members</a>
+                            <a href="alumni.html">Alumni</a>
+                        </div>
+                    </div>
+                    <div class="dropdown-wrapper">
+                        <button class="nav-item dropdown-toggle">
+                            <a href="publications.html"
+                                style="text-decoration:none; color:inherit;"><span>Publications</span></a>
+                            <span class="chevron"></span>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a href="publications/papers.html">Papers</a>
+                            <a href="publications/patents.html">Patents</a>
+                            <a href="publications/books.html">Book & Chapters</a>
+                        </div>
+                    </div>
+                    <a href="news.html" class="nav-item"><span>News</span></a>
+                    <a href="lab-facilities.html" class="nav-item"><span>Lab Facilities</span></a>
+                    <a href="contact.html" class="nav-item"><span>Contact</span></a>
+                </div>
+            </div>
+            <div class="nav-right">
+                <button id="theme-toggle" aria-label="Toggle dark and light mode">
+                    <svg class="icon sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="icon moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+                <button class="search-trigger search-icon" aria-label="Open Search">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content animate-on-scroll">
+                <h1 class="hero-title">Pharmaceutical Innovation & <br> Translational Research Laboratory</h1>
+                <p class="hero-subtitle">At the Pharmaceutical Innovation & Translational Research Laboratory (PITRL),
+                    Department of Pharmaceutics, NIPER Hyderabad, we’re committed to advancing next-generation
+                    therapeutic strategies for the prevention, management, and treatment of complex diseases.</p>
+                <div class="hero-buttons" style="gap: 5rem;">
+                    <a href="#pi-section" class="btn btn-secondary" style="padding: 0.7rem 1.5rem;">Learn More</a>
+                    <space><a href="research.html" class="btn btn-primary">Join Us</a></space>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="pi-section" id="pi-section">
+            <div class="container pi-grid">
+                <div class="pi-image animate-on-scroll">
+                    <!-- Placeholder for PI photo -->
+                    <img src="assets/images/team/pi-image.jpg" alt="Dr. Saurabh Srivastava">
+                </div>
+                <div class="pi-content animate-on-scroll">
+                    <h2 class="section-subtitle">Principal Investigator</h2>
+                    <h1 class="section-title">Dr. Saurabh Srivastava</h1>
+                    <p>He specializes in cancer nanobiology, nanomedicine, NDDS, and topical & dermal formulations. He
+                        has extensive experience in translational research, product development, technology transfer,
+                        and project management, with strong expertise in regulatory affairs and intellectual property.
+                        His work bridges innovative science and industry needs, guiding pharmaceutical products from
+                        concept to large-scale production while mentoring future scientists and fostering
+                        interdisciplinary collaboration.</p>
+                    <a href="#" class="btn btn-primary">View Profile</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="research-scholars-section">
+            <div class="container">
+                <h2 class="section-title text-center animate-on-scroll">Research Scholars</h2>
+                <div class="scholars-image-container animate-on-scroll">
+                    <img src="assets/images/research scholars/1768318680694-01.jpeg" alt="Research Scholars">
+                </div>
+                <div class="scholars-image-container animate-on-scroll delay-1">
+                    <img src="assets/images/research scholars/1768318431244-01.jpeg" alt="Research Scholars">
+                </div>
+            </div>
+        </section>
+
+        <section class="research-group-cards-section">
+            <div class="container research-cards-grid">
+                <!-- Research Group Cards will go here -->
+                <a href="neuro-research.html" class="research-card-link">
+                    <div class="research-group-card">
+                        <div class="card-front">
+                            <img src="assets/images/research groups/Brain_Cancer.jpg" alt="Neuro Research" class="card-bg-image">
+                            <div class="card-overlay"></div>
+                            <h3>Neuro Research</h3>
+                        </div>
+                        <div class="card-back">
+                            <p>Advanced nanotechnology-driven strategies for neurological disorders, focusing on
+                                brain-targeted delivery systems and translational neurotherapeutics.</p>
+                        </div>
+                    </div>
+                    <div class="card-title-reveal">Neuro Research</div>
+                </a>
+
+                <a href="cancer-research.html" class="research-card-link">
+                    <div class="research-group-card">
+                        <div class="card-front">
+                            <img src="assets/images/research groups/Lung_Cancer.jpg" alt="Cancer Research" class="card-bg-image">
+                            <div class="card-overlay"></div>
+                            <h3>Cancer Research</h3>
+                        </div>
+                        <div class="card-back">
+                            <p>Translational cancer nanomedicine focused on tumor-targeted and personalized therapeutic
+                                systems.</p>
+                        </div>
+                    </div>
+                    <div class="card-title-reveal">Cancer Research</div>
+                </a>
+
+                <a href="diabetes-research.html" class="research-card-link">
+                    <div class="research-group-card">
+                        <div class="card-front">
+                            <img src="assets/images/research groups/Diabetes.jpg" alt="Diabetes Research" class="card-bg-image">
+                            <div class="card-overlay"></div>
+                            <h3>Diabetes Research</h3>
+                        </div>
+                        <div class="card-back">
+                            <p>Developing novel drug delivery systems and therapeutic strategies for improved diabetes
+                                management and treatment outcomes.</p>
+                        </div>
+                    </div>
+                    <div class="card-title-reveal">Diabetes Research</div>
+                </a>
+
+                <a href="derma-research.html" class="research-card-link">
+                    <div class="research-group-card">
+                        <div class="card-front">
+                            <img src="assets/images/research groups/Derma.webp" alt="Derma Research" class="card-bg-image">
+                            <div class="card-overlay"></div>
+                            <h3>Derma Research</h3>
+                        </div>
+                        <div class="card-back">
+                            <p>Innovating topical and transdermal drug delivery systems for enhanced treatment of
+                                dermatological conditions and skin diseases.</p>
+                        </div>
+                    </div>
+                    <div class="card-title-reveal">Derma Research</div>
+                </a>
+
+                <a href="solid-state-research.html" class="research-card-link">
+                    <div class="research-group-card">
+                        <div class="card-front">
+                            <img src="assets/images/research groups/Solid-State.png" alt="Solid-State Research" class="card-bg-image">
+                            <div class="card-overlay"></div>
+                            <h3>Solid-State Research</h3>
+                        </div>
+                        <div class="card-back">
+                            <p>Focusing on the characterization and engineering of pharmaceutical solids to improve drug
+                                stability, solubility, and bioavailability.</p>
+                        </div>
+                    </div>
+                    <div class="card-title-reveal">Solid-State Research</div>
+                </a>
+            </div>
+        </section>
+
+
+
+
+        <section class="stats-section">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item animate-on-scroll">
+                        <h3 class="stat-number" data-target="57">0</h3>
+                        <p class="stat-label">Publications</p>
+                    </div>
+                    <div class="stat-item animate-on-scroll">
+                        <h3 class="stat-number" data-target="39">0</h3>
+                        <p class="stat-label">Research Papers</p>
+                    </div>
+                    <div class="stat-item animate-on-scroll">
+                        <h3 class="stat-number" data-target="14">0</h3>
+                        <p class="stat-label">Patents</p>
+                    </div>
+                    <div class="stat-item animate-on-scroll">
+                        <h3 class="stat-number" data-target="30">0</h3>
+                        <p class="stat-label">Collaborations</p>
+                    </div>
+                    <div class="stat-item animate-on-scroll">
+                        <h3 class="stat-number" data-target="50">0</h3>
+                        <p class="stat-label">Students Trained</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="publications-section">
+            <div class="container">
+                <h2 class="section-title text-center animate-on-scroll">Latest Publications & Patents</h2>
+                <div class="publications-grid">
+                    <!-- Publication items will be dynamically inserted or statically placed here -->
+                    <div class="publication-card animate-on-scroll">
+                        <h4>Disulfiram-Encapsulated Poly(caprolactone) Nanofiber Scaffolds for Oral Squamous Cell
+                            Carcinoma Management</h4>
+                        <p>2025 | BioNanoScience</p>
+                        <a href="https://doi.org/10.1007/S12668-025-02153-5" target="_blank" class="view-link">View
+                            Paper</a>
+                    </div>
+                    <div class="publication-card animate-on-scroll">
+                        <h4>Quality by Design (QbD) accredited naringenin-loaded chitosan nanoparticles impregnated gel
+                            for diabetic wound healing</h4>
+                        <p>2025 | J Drug Deliv Sci Technol</p>
+                        <a href="https://doi.org/10.1016/J.JDDST.2025.107418" target="_blank" class="view-link">View
+                            Paper</a>
+                    </div>
+                    <div class="publication-card animate-on-scroll">
+                        <h4>Pharmaceutical Composition of Ruxolitinib and Salt Thereof for the Management of Skin
+                            Manifestations</h4>
+                        <p>2025 | Granted Patent</p>
+                        <a href="assets/docs/Patents/Ruxolitinib_Granted Patent Certificate.pdf" target="_blank"
+                            class="view-link">View Patent</a>
+                    </div>
+                </div>
+                <div class="text-center animate-on-scroll" style="margin-top: 2rem;">
+                    <a href="publications.html" class="btn btn-secondary">View All Publications</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="news-section">
+            <div class="container">
+                <h2 class="section-title text-center animate-on-scroll">News & Updates</h2>
+                <div class="news-grid">
+                    <div class="news-card animate-on-scroll">
+                        <p class="news-date">Jan 04, 2026</p>
+                        <h4 class="news-title">Lab receives major grant for cancer research.</h4>
+                        <p class="news-description">A significant grant was awarded to PITRL to further investigate
+                            novel drug delivery systems for oncology.</p>
+                    </div>
+                    <div class="news-card animate-on-scroll">
+                        <p class="news-date">Dec 15, 2025</p>
+                        <h4 class="news-title">Dr. Srivastava presents at international conference.</h4>
+                        <p class="news-description">Our PI shared key findings on nanomedicine at the annual Global
+                            Pharma Symposium.</p>
+                    </div>
+                    <div class="news-card animate-on-scroll">
+                        <p class="news-date">Nov 20, 2025</p>
+                        <h4 class="news-title">New publication in Nature Communications.</h4>
+                        <p class="news-description">The team published a groundbreaking paper on solid-state
+                            characterization of new APIs.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-column">
+                <div class="logo-container">
+                    <img src="assets/images/logos/PITRL_Logo.png" alt="PITRL Logo" class="logo-image">
+                    <div class="logo-text">
+                        <span>PITRL</span>
+                    </div>
+                </div>
+                <br>
+                <p><strong>Pharmaceutical Innovation & <br> Translational Research Laboratory</strong></p>
+                <p>Department of Pharmaceutics<br>NIPER Hyderabad, India</p>
+                <p class="tagline">Advancing translational pharmaceutical science through innovation and collaboration.
+                </p>
+            </div>
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="publications.html">Publications</a></li>
+                    <li><a href="lab-facilities.html">Lab Facilities</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Research Profiles</h4>
+                <div class="research-profile-logos">
+                    <a href="https://scholar.google.com/citations?user=5BoD5XwAAAAJ&hl=en" target="_blank"
+                        aria-label="Google Scholar" title="Google Scholar">
+                        <img src="assets/images/logos/Google_Scholar_Logo.png" alt="Google Scholar Logo">
+                    </a>
+                    <a href="https://www.scopus.com/authid/detail.uri?authorId=55609420000" target="_blank"
+                        aria-label="Scopus" title="Scopus">
+                        <img src="assets/images/logos/Scopus_Logo.png" alt="Scopus Logo">
+                    </a>
+                    <a href="https://www.researchgate.net/profile/Saurabh-Srivastava-68" target="_blank"
+                        aria-label="ResearchGate" title="ResearchGate">
+                        <img src="assets/images/logos/ResearchGate_Logo.png" alt="ResearchGate Logo">
+                    </a>
+                    <a href="https://orcid.org/0000-0003-3159-7826" target="_blank" aria-label="ORCID" title="ORCID">
+                        <img src="assets/images/logos/ORCID_iD_Logo.png" alt="ORCID iD Logo">
+                    </a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h4>Connect</h4>
+                <p><a href="mailto:contact@pitrl.com">contact@pitrl.com</a></p>
+                <p>Location: Hyderabad, India</p>
+                <a href="#" class="btn btn-cta">Collaborate With Us</a>
+            </div>
+        </div>
+        <div class="footer-bottom-bar">
+            <div class="container">
+                <p>© 2026 Pharmaceutical Innovation & Translational Research Laboratory (PITRL).  All Rights Reserved.
+                </p>
+                <p class="micro-text">Architected & Engineered by Anushree Kajal Sikder</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js" defer></script>
+    <script src="js/research.js" defer></script>
+
+    <!-- Search Overlay -->
+    <div class="search-overlay">
+        <button class="close-search" aria-label="Close Search">&times;</button>
+        <div class="search-overlay-content">
+            <input type="text" class="search-overlay-input" placeholder="Type to search...">
+        </div>
+    </div>
+</body>
+
+</html>

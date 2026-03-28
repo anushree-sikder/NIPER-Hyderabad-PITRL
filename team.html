@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team | PITRL</title>
+    <link rel="icon" href="assets/images/logos/PITRL_Logo.png" type="image/png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/team-hero-halo.css">
+    <link rel="stylesheet" href="css/team.css">
+    <link rel="stylesheet" href="css/pi-photo-gallery.css">
+    <!-- Dark/Light Mode initial setup -->
+
+</head>
+
+<body>
+    <!-- Header (Common to all pages) -->
+    <header class="sticky-header">
+        <nav class="navbar">
+            <div class="nav-left">
+                <a href="index.html" class="logo-container">
+                    <img src="assets/images/logos/PITRL_Logo.png" alt="PITRL Logo" class="logo-image">
+                    <div class="logo-text">
+                        <span>PITRL</span>
+                    </div>
+                </a>
+            </div>
+            <div class="nav-center">
+                <div class="nav-links">
+                    <a href="index.html" class="nav-item"><span>Home</span></a>
+                    <a href="about.html" class="nav-item"><span>About</span></a>
+                    <div class="dropdown-wrapper">
+                        <button class="nav-item dropdown-toggle">
+                            <a href="research.html"
+                                style="text-decoration:none; color:inherit;"><span>Research</span></a>
+                            <span class="chevron"></span>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a href="neuro-research.html">Neuro Research</a>
+                            <a href="cancer-research.html">Cancer Research</a>
+                            <a href="diabetes-research.html">Diabetes Research</a>
+                            <a href="derma-research.html">Derma Research</a>
+                            <a href="solid-state-research.html">Solid-State Research</a>
+                        </div>
+                    </div>
+                    <div class="dropdown-wrapper">
+                        <button class="nav-item dropdown-toggle active">
+                            <a href="team.html" style="text-decoration:none; color:inherit;"><span>Team</span></a>
+                            <span class="chevron"></span>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a href="pi.html">Principal Investigator</a>
+                            <a href="members.html">Current Members</a>
+                            <a href="alumni.html">Alumni</a>
+                        </div>
+                    </div>
+                    <div class="dropdown-wrapper">
+                        <button class="nav-item dropdown-toggle">
+                            <a href="publications.html"
+                                style="text-decoration:none; color:inherit;"><span>Publications</span></a>
+                            <span class="chevron"></span>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a href="publications/papers.html">Papers</a>
+                            <a href="publications/patents.html">Patents</a>
+                            <a href="publications/books.html">Book & Chapters</a>
+                        </div>
+                    </div>
+                    <a href="news.html" class="nav-item"><span>News</span></a>
+                    <a href="lab-facilities.html" class="nav-item"><span>Lab Facilities</span></a>
+                    <a href="contact.html" class="nav-item"><span>Contact</span></a>
+                </div>
+            </div>
+            <div class="nav-right">
+                <button id="theme-toggle" aria-label="Toggle dark and light mode">
+                    <svg class="icon sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="icon moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+                <button class="search-trigger search-icon" aria-label="Open Search">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main id="team-page">
+        <section class="hero-intro team-hero-intro" data-animate>
+            <div class="hero-content">
+                <h1 class="hero-title">Our Team</h1>
+            </div>
+        </section>
+
+        <section class="team-introduction" data-animate>
+            <div class="container">
+                <p>PITRL is powered by a diverse team of scientists, scholars, and innovators working at the forefront
+                    of pharmaceutical and translational research.</p>
+            </div>
+        </section>
+
+        <section class="team-navigation-cards" data-animate>
+            <div class="container">
+                <div class="nav-cards-grid">
+                    <a href="pi.html" class="nav-card" data-animate>
+                        <div class="nav-card-content">
+                            <h3 class="nav-card-title">
+                                <center>Principal Investigator</center>
+                            </h3>
+                            <p class="nav-card-descriptor">
+                                <center>Guiding our scientific vision</center>
+                            </p>
+                            <div class="nav-card-accent"></div>
+                        </div>
+                    </a>
+                    <a href="members.html" class="nav-card" data-animate>
+                        <div class="nav-card-content">
+                            <h3 class="nav-card-title">
+                                <center>Current Members</center>
+                            </h3>
+                            <p class="nav-card-descriptor"><center>The driving force of our research</center></p>
+                            <div class="nav-card-accent"></div>
+                        </div>
+                    </a>
+                    <a href="alumni.html" class="nav-card" data-animate>
+                        <div class="nav-card-content">
+                            <h3 class="nav-card-title">
+                                <center>Alumni</center>
+                            </h3>
+                            <p class="nav-card-descriptor"><center>Our legacy of scientific excellence</center></p>
+                            <div class="nav-card-accent"></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <section class="life-at-pitrl-section">
+        <!-- 3D Photo Scroll Gallery -->
+        <div class="photo-gallery-3d">
+            <div class="section-title-container" data-animate>
+                <h2 class="section-title">Life at PITRL</h2>
+            </div>
+            <div class="photo-scroll-viewport">
+                <button class="photo-gallery-arrow prev" aria-label="Previous photo">&#10094;</button>
+                <button class="photo-gallery-arrow next" aria-label="Next photo">&#10095;</button>
+                <div class="photo-scroll-track">
+                    <!-- 1 -->
+                    <div class="photo-slide portrait" data-title="Ms. Anupama Sikder"
+                        data-desc="Performing research in the lab">
+                        <img src="assets/images/research scholars/Dr_Anupama_Sikder_performing_research_in_the_lab.jpeg"
+                            alt="Ms. Anupama Sikder performing research in the lab" loading="lazy">
+                    </div>
+                    <!-- 2 -->
+                    <div class="photo-slide landscape" data-title="Team PITRL" data-desc="Research scholars at work">
+                        <img src="assets/images/research scholars/1768318680694-01.jpeg"
+                            alt="PITRL research scholars at work" loading="lazy">
+                    </div>
+                    <!-- 3 -->
+                    <div class="photo-slide landscape" data-title="Team PITRL"
+                        data-desc="Collaborative research in progress">
+                        <img src="assets/images/research scholars/1768318258978-01.jpeg"
+                            alt="Collaborative research in progress at PITRL" loading="lazy">
+                    </div>
+                    <!-- 4 -->
+                    <div class="photo-slide portrait" data-title="Lab Moments"
+                        data-desc="Hands-on experimentation at PITRL">
+                        <img src="assets/images/research scholars/1768318781922-01.jpeg"
+                            alt="Hands-on experimentation at PITRL" loading="lazy">
+                    </div>
+                    <!-- 5 -->
+                    <div class="photo-slide landscape" data-title="Team PITRL"
+                        data-desc="Building the future of pharmaceutical science">
+                        <img src="assets/images/research scholars/1768318549358-02.jpeg"
+                            alt="PITRL team building the future of pharmaceutical science" loading="lazy">
+                    </div>
+                    <!-- 6 -->
+                    <div class="photo-slide portrait" data-title="Lab Moments"
+                        data-desc="Precision & dedication in the lab">
+                        <img src="assets/images/research scholars/20260113_125716.jpeg"
+                            alt="Precision and dedication in the PITRL lab" loading="lazy">
+                    </div>
+                    <!-- 7 -->
+                    <div class="photo-slide landscape" data-title="Team PITRL"
+                        data-desc="Innovation through collaboration">
+                        <img src="assets/images/research scholars/1768318431244-01.jpeg"
+                            alt="Innovation through collaboration at PITRL" loading="lazy">
+                    </div>
+                    <!-- 8 -->
+                </div>
+            </div>
+            <div class="photo-gallery-caption">
+                <p class="caption-title"></p>
+                <p class="caption-desc"></p>
+            </div>
+            <div class="photo-gallery-dots">
+                <span class="pg-dot active" data-index="0"></span>
+                <span class="pg-dot" data-index="1"></span>
+                <span class="pg-dot" data-index="2"></span>
+                <span class="pg-dot" data-index="3"></span>
+                <span class="pg-dot" data-index="4"></span>
+                <span class="pg-dot" data-index="5"></span>
+                <span class="pg-dot" data-index="6"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Common to all pages) -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-column">
+                <div class="logo-container"><a href="index.html"><img src="assets/images/logos/PITRL_Logo.png"
+                            alt="PITRL Logo" class="logo-image">
+                        <div class="logo-text"><span>PITRL</span></div>
+                    </a></div><br>
+                <p><strong>Pharmaceutical Innovation & <br> Translational Research Laboratory</strong></p>
+                <p>Department of Pharmaceutics<br>NIPER Hyderabad, India</p>
+                <p class="tagline">Advancing translational pharmaceutical science through innovation and collaboration.
+                </p>
+            </div>
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="publications.html">Publications</a></li>
+                    <li><a href="lab-facilities.html">Lab Facilities</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Research Profiles</h4>
+                <div class="research-profile-logos"><a
+                        href="https://scholar.google.com/citations?user=5BoD5XwAAAAJ&hl=en" target="_blank"
+                        aria-label="Google Scholar" title="Google Scholar"><img
+                            src="assets/images/logos/Google_Scholar_Logo.png" alt="Google Scholar Logo"></a><a
+                        href="https://www.scopus.com/authid/detail.uri?authorId=55609420000" target="_blank"
+                        aria-label="Scopus" title="Scopus"><img src="assets/images/logos/Scopus_Logo.png"
+                            alt="Scopus Logo"></a><a href="https://www.researchgate.net/profile/Saurabh-Srivastava-68"
+                        target="_blank" aria-label="ResearchGate" title="ResearchGate"><img
+                            src="assets/images/logos/ResearchGate_Logo.png" alt="ResearchGate Logo"></a><a
+                        href="https://orcid.org/0000-0003-3159-7826" target="_blank" aria-label="ORCID"
+                        title="ORCID"><img src="assets/images/logos/ORCID_iD_Logo.png" alt="ORCID iD Logo"></a></div>
+            </div>
+            <div class="footer-column">
+                <h4>Connect</h4>
+                <p><a href="mailto:contact@pitrl.com">contact@pitrl.com</a></p>
+                <p>Location: Hyderabad, India</p><a href="#" class="btn btn-cta">Collaborate With Us</a>
+            </div>
+        </div>
+        <div class="footer-bottom-bar">
+            <div class="container">
+                <p>© 2026 Pharmaceutical Innovation & Translational Research Laboratory (PITRL). All Rights Reserved.
+                </p>
+                <p class="micro-text">Architected & Engineered by Anushree Kajal Sikder</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Common Scripts -->
+    <script src="js/script.js" defer></script>
+    <script src="js/team.js" defer></script>
+    <script src="js/pi-photo-gallery.js" defer></script>
+
+    <!-- Search Overlay -->
+    <div class="search-overlay">
+        <button class="close-search" aria-label="Close Search">&times;</button>
+        <div class="search-overlay-content">
+            <input type="text" class="search-overlay-input" placeholder="Type to search...">
+        </div>
+    </div>
+</body>
+
+</html>

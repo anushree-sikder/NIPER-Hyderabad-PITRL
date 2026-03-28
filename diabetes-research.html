@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Research | PITRL</title>
+    <link rel="icon" href="assets/images/logos/PITRL_Logo.png" type="image/png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/research.css">
+    <link rel="stylesheet" href="css/team-members.css">
+    <link rel="stylesheet" href="css/research-pubs.css">
+</head>
+
+<body data-research-group="diabetes">
+    <!-- Header (Common to all pages) -->
+    <header class="sticky-header">
+        <nav class="navbar">
+            <div class="nav-left">
+                <a href="index.html" class="logo-container">
+                    <img src="assets/images/logos/PITRL_Logo.png" alt="PITRL Logo" class="logo-image">
+                    <div class="logo-text">
+                        <span>PITRL</span>
+                    </div>
+                </a>
+            </div>
+            <div class="nav-center">
+                <div class="nav-links">
+                    <a href="index.html" class="nav-item"><span>Home</span></a>
+                    <a href="about.html" class="nav-item"><span>About</span></a>
+                    <div class="dropdown-wrapper">
+                        <button class="nav-item dropdown-toggle active">
+                            <a href="research.html"
+                                style="text-decoration:none; color:inherit;"><span>Research</span></a>
+                            <span class="chevron"></span>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a href="neuro-research.html">Neuro Research</a>
+                            <a href="cancer-research.html">Cancer Research</a>
+                            <a href="diabetes-research.html" class="active">Diabetes Research</a>
+                            <a href="derma-research.html">Derma Research</a>
+                            <a href="solid-state-research.html">Solid-State Research</a>
+                        </div>
+                    </div>
+                    <div class="dropdown-wrapper">
+                        <button class="nav-item dropdown-toggle">
+                            <a href="team.html" style="text-decoration:none; color:inherit;"><span>Team</span></a>
+                            <span class="chevron"></span>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a href="pi.html">Principal Investigator</a>
+                            <a href="members.html">Current Members</a>
+                            <a href="alumni.html">Alumni</a>
+                        </div>
+                    </div>
+                    <div class="dropdown-wrapper">
+                        <button class="nav-item dropdown-toggle">
+                            <a href="publications.html"
+                                style="text-decoration:none; color:inherit;"><span>Publications</span></a>
+                            <span class="chevron"></span>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a href="publications/papers.html">Papers</a>
+                            <a href="publications/patents.html">Patents</a>
+                            <a href="publications/books.html">Book & Chapters</a>
+                        </div>
+                    </div>
+                    <a href="news.html" class="nav-item"><span>News</span></a>
+                    <a href="lab-facilities.html" class="nav-item"><span>Lab Facilities</span></a>
+                    <a href="contact.html" class="nav-item"><span>Contact</span></a>
+                </div>
+            </div>
+            <div class="nav-right">
+                <button id="theme-toggle" aria-label="Toggle dark and light mode">
+                    <svg class="icon sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="icon moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+                <button class="search-trigger search-icon" aria-label="Open Search">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-intro research-hero-intro">
+            <div class="hero-content">
+                <h1 class="hero-title">Diabetes Research Group</h1>
+            </div>
+        </section>
+
+        <section class="section-content">
+            <div class="container">
+                <div class="research-image-wrapper">
+                    <img class="research-hero-image" src="assets/images/research groups/Diabetes.jpg" alt="Diabetes Research">
+                </div>
+                <p class="research-short-description">Advanced delivery systems for metabolic disorders. Focus on
+                    patient-centric, long-acting, and targeted therapies.</p>
+
+                <section class="team-grid-section">
+                    <h2 class="team-group-title" data-animate>Current Members</h2>
+                    <div class="team-grid" id="diabetes-current-members" data-animate>
+                        <!-- Current members will be injected here by JS -->
+                    </div>
+
+                    <h2 class="team-group-title" data-animate>Alumni</h2>
+                    <div class="team-grid" id="diabetes-alumni" data-animate>
+                        <!-- Alumni will be injected here by JS -->
+                    </div>
+                </section>
+
+                <section class="section-content" id="group-publications">
+                    <div class="container">
+                        <h2 class="section-subtitle">Publications</h2>
+                        <div id="rp-content">
+                            <!-- Populated by js/research-publications.js -->
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (Common to all pages) -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-column">
+                <div class="logo-container">
+                    <a href="index.html">
+                        <img src="assets/images/logos/PITRL_Logo.png" alt="PITRL Logo" class="logo-image">
+                        <div class="logo-text">
+                            <span>PITRL</span>
+                        </div>
+                    </a>
+                </div>
+                <br>
+                <p><strong>Pharmaceutical Innovation & <br> Translational Research Laboratory</strong></p>
+                <p>Department of Pharmaceutics<br>NIPER Hyderabad, India</p>
+                <p class="tagline">Advancing translational pharmaceutical science through innovation and collaboration.
+                </p>
+            </div>
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="publications.html">Publications</a></li>
+                    <li><a href="lab-facilities.html">Lab Facilities</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Research Profiles</h4>
+                <div class="research-profile-logos">
+                    <a href="https://scholar.google.com/citations?user=5BoD5XwAAAAJ&hl=en" target="_blank"
+                        aria-label="Google Scholar" title="Google Scholar">
+                        <img src="assets/images/logos/Google_Scholar_Logo.png" alt="Google Scholar Logo">
+                    </a>
+                    <a href="https://www.scopus.com/authid/detail.uri?authorId=55609420000" target="_blank"
+                        aria-label="Scopus" title="Scopus">
+                        <img src="assets/images/logos/Scopus_Logo.png" alt="Scopus Logo">
+                    </a>
+                    <a href="https://www.researchgate.net/profile/Saurabh-Srivastava-68" target="_blank"
+                        aria-label="ResearchGate" title="ResearchGate">
+                        <img src="assets/images/logos/ResearchGate_Logo.png" alt="ResearchGate Logo">
+                    </a>
+                    <a href="https://orcid.org/0000-0003-3159-7826" target="_blank" aria-label="ORCID" title="ORCID">
+                        <img src="assets/images/logos/ORCID_iD_Logo.png" alt="ORCID iD Logo">
+                    </a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h4>Connect</h4>
+                <p><a href="mailto:contact@pitrl.com">contact@pitrl.com</a></p>
+                <p>Location: Hyderabad, India</p>
+                <a href="#" class="btn btn-cta">Collaborate With Us</a>
+            </div>
+        </div>
+        <div class="footer-bottom-bar">
+            <div class="container">
+                <p>© 2026 Pharmaceutical Innovation & Translational Research Laboratory (PITRL).  All Rights Reserved.
+                </p>
+                <p class="micro-text">Architected & Engineered by Anushree Kajal Sikder</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js" defer></script>
+    <script src="js/research.js" defer></script>
+    <script src="js/diabetes-research-team.js" defer></script>
+    <script src="js/research-publications.js" defer></script>
+
+    <!-- Search Overlay -->
+    <div class="search-overlay">
+        <button class="close-search" aria-label="Close Search">&times;</button>
+        <div class="search-overlay-content">
+            <input type="text" class="search-overlay-input" placeholder="Type to search...">
+        </div>
+    </div>
+</body>
+
+</html>
