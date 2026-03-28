@@ -7,7 +7,6 @@ The Pharmaceutical Innovation & Translational Research Laboratory (PITRL), locat
 
 ## Live Demo and Visuals
 - **Live Link:** [https://niper-pitrl.github.io/](https://niper-pitrl.github.io/)
-- **Visual Overview:**
   ![PITRL Workspace](assets/images/logos/PITRL_Logo.png)
 
 ---
