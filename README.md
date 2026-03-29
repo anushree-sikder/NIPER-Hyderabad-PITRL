@@ -6,7 +6,7 @@ The Pharmaceutical Innovation & Translational Research Laboratory (PITRL), locat
 ---
 
 ## 🔗 Live Demo and Visuals
-📌**Note:** For best experience, view on desktop or enable Desktop Mode on mobile.
+📍 **Note:** For best experience, view on desktop or enable Desktop Mode on mobile.
 - **Live Link:** [https://anushree-sikder.github.io/NIPER-Hyderabad-PITRL/](https://anushree-sikder.github.io/NIPER-Hyderabad-PITRL/) <br><br>
   
   
